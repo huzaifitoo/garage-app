@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">garage app</string>
+    <string name="item_label">Items</string>
+    <string name="item_label2">Items2</string>
+</resources>
