@@ -29,7 +29,6 @@ class MainActivity : AppCompatActivity() {
 
         carsDatabase = CarsDatabase.getDatabase(applicationContext)
 
-
         val adapter = ArrayAdapter<String>(this, R.layout.list_item)
         val autoComplete: AutoCompleteTextView = findViewById(R.id.autoComplete)
 
@@ -84,6 +83,7 @@ class MainActivity : AppCompatActivity() {
                 if (make.isNotBlank() && model.isNotBlank()) {
                     val carsData = CarsData(make, model.toInt())
                     carsDatabase.carsDao().insert(carsData)
+
                     Toast.makeText(this@MainActivity, "Car added successfully!", Toast.LENGTH_SHORT)
                         .show()
                 } else {
